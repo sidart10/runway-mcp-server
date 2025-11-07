@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "runway": {
+      "command": "python3",
+      "args": ["/Users/sid/Desktop/4. Coding Projects/runway-mcp-server/runway_mcp_server.py"],
+      "env": {
+        "RUNWAY_API_KEY": "your_runway_api_key_here"
+      },
+      "description": "Runway AI video generation and editing server with Gen-4, Aleph, and all latest features. Note: API key can also be loaded from .env file in the server directory."
+    }
+  }
+}
