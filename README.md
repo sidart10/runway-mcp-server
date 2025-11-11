@@ -15,6 +15,8 @@ A Model Context Protocol (MCP) server for **Runway AI** - featuring Gen-4 models
 
 ## 📦 Installation
 
+> **⚠️ Note:** The root-level `runway_mcp_server.py` file is kept for backward compatibility. New installations should use the PyPI package below.
+
 ### Option 1: Install from PyPI (Recommended)
 
 ```bash
