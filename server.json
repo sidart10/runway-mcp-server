@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.sidart10/runway-mcp-server",
+  "title": "Runway AI Video Generation",
+  "description": "Comprehensive MCP server for Runway ML featuring Gen-4 image generation, Veo 3 video models, Aleph video editing (add/remove objects, change camera angles, transform lighting), video extension, 4K upscaling, and style transfer. Supports text-to-video, image-to-video, and advanced video-to-video editing workflows.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/sidart10/runway-mcp-server",
+    "source": "github"
+  },
+  "status": "active",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "runway-mcp-server",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "RUNWAY_API_KEY",
+          "description": "API key from dev.runwayml.com for authenticating with Runway ML services",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "video-generation",
+    "ai-video",
+    "runway",
+    "gen-4",
+    "aleph",
+    "video-editing",
+    "image-generation",
+    "veo",
+    "ai",
+    "multimedia"
+  ],
+  "categories": [
+    "media",
+    "ai",
+    "video"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sidart10/runway-mcp-server",
+  "documentation": "https://github.com/sidart10/runway-mcp-server#readme"
+}
+

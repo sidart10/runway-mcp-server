@@ -1,6 +1,10 @@
 # 🎬 Runway MCP Server
 
+<!-- mcp-name: io.github.sidart10/runway-mcp-server -->
+
 A Model Context Protocol (MCP) server for **Runway AI** - featuring Gen-4 models, Aleph video editing, and comprehensive video generation tools.
+
+**MCP Registry Name:** `io.github.sidart10/runway-mcp-server`
 
 ## ✨ Features
 
@@ -9,24 +13,36 @@ A Model Context Protocol (MCP) server for **Runway AI** - featuring Gen-4 models
 - **📹 Gen-4 Video Generation** - Text-to-video, image-to-video, keyframe control
 - **🎭 Advanced Tools** - Video extension, 4K upscaling, style transfer
 
-## 📦 Quick Start
+## 📦 Installation
 
-### 1. Install Dependencies
+### Option 1: Install from PyPI (Recommended)
 
 ```bash
-# Create virtual environment
-python3 -m venv venv
+# Install with uvx (automatically manages dependencies)
+uvx runway-mcp-server
 
-# Activate it
-source venv/bin/activate  # Mac/Linux
-# or
-venv\Scripts\activate  # Windows
-
-# Install packages
-pip install -r requirements.txt
+# Or install globally with pip
+pip install runway-mcp-server
 ```
 
-### 2. Configure API Key
+### Option 2: Install from Source
+
+```bash
+# Clone the repository
+git clone https://github.com/sidart10/runway-mcp-server.git
+cd runway-mcp-server
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # Mac/Linux (or venv\Scripts\activate on Windows)
+
+# Install in development mode
+pip install -e .
+```
+
+## 🚀 Quick Start
+
+### 1. Configure API Key
 
 Create a `.env` file in the project root:
 
@@ -37,7 +53,7 @@ RUNWAY_API_KEY=your_api_key_here
 
 Get your API key from [dev.runwayml.com](https://dev.runwayml.com)
 
-### 3. Add to MCP Config
+### 2. Add to MCP Config
 
 **For Cursor:** Edit `~/.cursor/mcp.json`
 
@@ -47,17 +63,19 @@ Get your API key from [dev.runwayml.com](https://dev.runwayml.com)
 {
   "mcpServers": {
     "runway": {
-      "command": "/absolute/path/to/runway-mcp-server/venv/bin/python",
-      "args": ["/absolute/path/to/runway-mcp-server/runway_mcp_server.py"],
-      "env": {}
+      "command": "uvx",
+      "args": ["runway-mcp-server"],
+      "env": {
+        "RUNWAY_API_KEY": "your_api_key_here"
+      }
     }
   }
 }
 ```
 
-**Note:** The API key automatically loads from your `.env` file.
+**Note:** Replace `your_api_key_here` with your actual Runway API key from [dev.runwayml.com](https://dev.runwayml.com)
 
-### 4. Restart Your Client
+### 3. Restart Your Client
 
 Restart Cursor or Claude Desktop to load the server.
 
