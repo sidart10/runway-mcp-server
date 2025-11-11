@@ -101,31 +101,33 @@ Restart Cursor or Claude Desktop to load the server.
 ## 📚 Documentation
 
 - **[Quick Start Guide](docs/QUICKSTART.md)** - Get running in 5 minutes
+- **[Publishing Guide](docs/PUBLISHING_GUIDE.md)** - How to publish updates
 - **[Aleph Guide](docs/ALEPH_GUIDE.md)** - Video editing deep dive
 - **[Features Guide](docs/FEATURES.md)** - All capabilities explained
 - **[Architecture](docs/ARCHITECTURE.md)** - Technical details
-- **[Examples](examples/)** - Working code samples
+- **[Package Transformation](docs/PACKAGE_TRANSFORMATION_SUMMARY.md)** - How this was packaged
 
 ## 📁 Project Structure
 
 ```
 runway-mcp-server/
-├── runway_mcp_server.py    # Main server code
-├── requirements.txt         # Python dependencies
-├── .env                     # API key (create this)
-├── README.md               # This file
-├── .gitignore              # Git ignore rules
-├── venv/                   # Virtual environment
+├── src/                    # Package source code
+│   └── runway_mcp_server/
+│       ├── __init__.py
+│       └── server.py       # Main server code
 ├── docs/                   # Documentation
 │   ├── QUICKSTART.md
+│   ├── PUBLISHING_GUIDE.md
 │   ├── ALEPH_GUIDE.md
 │   ├── FEATURES.md
-│   ├── ARCHITECTURE.md
 │   └── ...
-├── examples/               # Code examples
-│   └── example_usage.py
-└── config/                 # Configuration templates
-    └── mcp_config_example.json
+├── config/                 # Configuration templates
+│   └── mcp_config_example.json
+├── pyproject.toml          # Package configuration
+├── server.json             # MCP Registry metadata
+├── requirements.txt        # Python dependencies
+├── README.md              # This file
+└── .env                   # API key (create this)
 ```
 
 ## 💡 Usage Examples
